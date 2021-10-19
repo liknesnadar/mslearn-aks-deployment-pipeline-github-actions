@@ -30,9 +30,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tas: ${{secrets.ACR_NAME}}/contoso-website:latest,${{secrets.ACR_NAME}}/contoso-website:${{ steps.fetch_version.outputs.TAG }}
+          tags: ${{secrets.ACR_NAME}}/contoso-website:latest,${{secrets.ACR_NAME}}/contoso-website:${{ steps.fetch_version.outputs.TAG }}
           push: true
-          
-          
-
-
